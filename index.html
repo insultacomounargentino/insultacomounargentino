@@ -172,16 +172,17 @@ Ahora vos también podés insultar como ellos.</h2>
 		function generator(){
 			// Add your own words to the wordlist. Be carefull to obey the showed syntax
 
-			var wordlist1 = ["Cool","Masked","Bloody","Lame","Big","Stupid","Drunk","Rotten",
-							"Blue","Black","White","Red","Purple","Golden","Silver"];
-
-			var wordlist2 = ["Hamster","Moose","Lama","Duck","Bear","Eagle","Tiger",
-							"Rocket","Bullet","Knee","Foot","Hand"]
+			var wordlist1 = ["","GORDO","SEBOSO","PORKY","CERDO","OBESO","ALBÓNDIGA","BALLENA","FANEGAS","MANTECOSO"];
+			var wordlist2 = ["CEMENTERIO DE","DESTRUCTOR DE","POZO DE","EXTINGUIDOR DE","TERROR DE","GENOCIDA DE","TERRORISTA DE","ATILA DE","CATÁSTROFE DE","ANIQUILADOR DE","ASESINO SERIAL DE","TERMOTANQUE DE","CONSUMIDOR COMPULSIVO DE","ABUSADOR DE","BUQUE CARGUERO DE"];
+			var wordlist3 = ["CANELONES A LA BOLOÑESA","POLLOS ASADOS RELLENOS","CHORIPANES LLENOS DE GRASA","MILANESAS DE POLLO","MIL GRANJAS DE POLLOS","OCHO CAMIONES DE CONSERVAS CÁRNICAS","HAMBURGUESAS DEL MCDONALDS","TODO TIPO DE CARNES","GUISOS DE CARNE","ENCHILADAS TAMAÑO FAMILIAR","SALAME PICANTE","PIJAS COMO TUBERÍAS","BOCATAS DE CALAMARES","COMIDA CHINA","PIZZAS OCHO QUESOS"];
+			var wordlist4 = ["LA CONCHA DE TU MADRE","VERGA","MORITE","NO JODÁS","HIJO DE MIL PUTAS","HACETE UN ENEMA DE CAFÉ","YO ME VOY A MORIR","NOS QUEDAMOS FUERA DEL MUNDIAL POR TU CULPA","TE CONFUNDEN CON LA BOLA","ME DAN PENA TUS TOBILLOS"];
 
 			// Random numbers are made 
 			var randomNumber1 = parseInt(Math.random() * wordlist1.length);
 			var randomNumber2 = parseInt(Math.random() * wordlist2.length);
-			var name = wordlist1[randomNumber1] + " " + wordlist2[randomNumber2];			
+			var randomNumber3 = parseInt(Math.random() * wordlist3.length);
+			var randomNumber4 = parseInt(Math.random() * wordlist4.length);
+			var name = wordlist1[randomNumber1] + " " + wordlist2[randomNumber2] + " " + wordlist3[randomNumber3] + " " + wordlist4[randomNumber4];			
 
 			//alert(name); //Remove first to slashes to alert the name
 
