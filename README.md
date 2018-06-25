@@ -1,1 +1,1 @@
-#[Insulta como un argentino]
+#Insulta como un argentino
