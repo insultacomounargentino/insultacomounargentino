@@ -64,7 +64,7 @@ Ahora vos también podés insultar como ellos.</h2>
         <hr class="star-dark mb-5">
 	<center>
           <div class="col-md-4 col-lg-4 text-center">
-            <a class="portfolio-item d-block mx-auto" onclick="">
+            <a class="portfolio-item d-block mx-auto" onclick="generator(1)">
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-grey">
                   <i>Gordos</i>
@@ -82,7 +82,7 @@ Ahora vos también podés insultar como ellos.</h2>
 	<br><br>
 		
           <div class="col-md-6 col-lg-4 text-center">
-            <a class="portfolio-item d-block mx-auto" onclick="generator()">
+            <a class="portfolio-item d-block mx-auto" onclick="generator(2)">
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-grey">
                   <i>Calvos</i>
@@ -100,7 +100,7 @@ Ahora vos también podés insultar como ellos.</h2>
 	<br><br>
 		
           <div class="col-md-4 col-lg-4 text-center">
-            <a class="portfolio-item d-block mx-auto" onclick="">
+            <a class="portfolio-item d-block mx-auto" onclick="generator(3)">
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-grey">
                   <i>Feos</i>
@@ -118,7 +118,7 @@ Ahora vos también podés insultar como ellos.</h2>
 	<br><br>
 		
           <div class="col-md-4 col-lg-4 text-center">
-            <a class="portfolio-item d-block mx-auto" onclick="">
+            <a class="portfolio-item d-block mx-auto" onclick="generator(4)">
               <div class="portfolio-item-caption d-flex position-absolute h-100 w-100">
                 <div class="portfolio-item-caption-content my-auto w-100 text-center text-grey">
                   <i>Malos</i>
@@ -178,133 +178,115 @@ Ahora vos también podés insultar como ellos.</h2>
 	*    The script is  free (as in "free speech" and also as in "free beer") in anyway. Use it after you own likings.
 	*    Peace and love. :)
 	*/	
-		function generator_gordo(){
+		function generator(index){
 			// Add your own words to the wordlist. Be carefull to obey the showed syntax
+			switch(index) {
+    			    case 1:
+				var wordlist1 = ["","GORDO","SEBOSO","PORKY","CERDO","OBESO","ALBÓNDIGA","BALLENA","FANEGAS","MANTECOSO"];
+				var wordlist2 = ["CEMENTERIO DE","DESTRUCTOR DE","POZO DE","EXTINGUIDOR DE","TERROR DE","GENOCIDA DE","TERRORISTA DE","ATILA DE","CATÁSTROFE DE","ANIQUILADOR DE","ASESINO SERIAL DE","TERMOTANQUE DE","CONSUMIDOR COMPULSIVO DE","ABUSADOR DE","BUQUE CARGUERO DE"];
+				var wordlist3 = ["CANELONES A LA BOLOÑESA","POLLOS ASADOS RELLENOS","CHORIPANES LLENOS DE GRASA","MILANESAS DE POLLO","MIL GRANJAS DE POLLOS","OCHO CAMIONES DE CONSERVAS CÁRNICAS","HAMBURGUESAS DEL MCDONALDS","TODO TIPO DE CARNES","GUISOS DE CARNE","ENCHILADAS TAMAÑO FAMILIAR","SALAME PICANTE","PIJAS COMO TUBERÍAS","BOCATAS DE CALAMARES","COMIDA CHINA","PIZZAS OCHO QUESOS"];
+				var wordlist4 = ["LA CONCHA DE TU MADRE","VERGA","MORITE","NO JODÁS","HIJO DE MIL PUTAS","HACETE UN ENEMA DE CAFÉ","YO ME VOY A MORIR","NOS QUEDAMOS FUERA DEL MUNDIAL POR TU CULPA","TE CONFUNDEN CON LA BOLA","ME DAN PENA TUS TOBILLOS"];
+				
+						// Random numbers are made 
+				var randomNumber1 = parseInt(Math.random() * wordlist1.length);
+				var randomNumber2 = parseInt(Math.random() * wordlist2.length);
+				var randomNumber3 = parseInt(Math.random() * wordlist3.length);
+				var randomNumber4 = parseInt(Math.random() * wordlist4.length);
+				var name = wordlist1[randomNumber1] + " " + wordlist2[randomNumber2] + " " + wordlist3[randomNumber3] + ", " + wordlist4[randomNumber4];			
 
-			var wordlist1 = ["","GORDO","SEBOSO","PORKY","CERDO","OBESO","ALBÓNDIGA","BALLENA","FANEGAS","MANTECOSO"];
-			var wordlist2 = ["CEMENTERIO DE","DESTRUCTOR DE","POZO DE","EXTINGUIDOR DE","TERROR DE","GENOCIDA DE","TERRORISTA DE","ATILA DE","CATÁSTROFE DE","ANIQUILADOR DE","ASESINO SERIAL DE","TERMOTANQUE DE","CONSUMIDOR COMPULSIVO DE","ABUSADOR DE","BUQUE CARGUERO DE"];
-			var wordlist3 = ["CANELONES A LA BOLOÑESA","POLLOS ASADOS RELLENOS","CHORIPANES LLENOS DE GRASA","MILANESAS DE POLLO","MIL GRANJAS DE POLLOS","OCHO CAMIONES DE CONSERVAS CÁRNICAS","HAMBURGUESAS DEL MCDONALDS","TODO TIPO DE CARNES","GUISOS DE CARNE","ENCHILADAS TAMAÑO FAMILIAR","SALAME PICANTE","PIJAS COMO TUBERÍAS","BOCATAS DE CALAMARES","COMIDA CHINA","PIZZAS OCHO QUESOS"];
-			var wordlist4 = ["LA CONCHA DE TU MADRE","VERGA","MORITE","NO JODÁS","HIJO DE MIL PUTAS","HACETE UN ENEMA DE CAFÉ","YO ME VOY A MORIR","NOS QUEDAMOS FUERA DEL MUNDIAL POR TU CULPA","TE CONFUNDEN CON LA BOLA","ME DAN PENA TUS TOBILLOS"];
+				//alert(name); //Remove first to slashes to alert the name
 
+				//If there's already a name it is removed  
+				if(document.getElementById("result_gordo")){
+					document.getElementById("placeholder_gordo").removeChild(document.getElementById("result_gordo"));
+				}
+				// A div element is created to show the generated name. The Name is added as a textnode. Textnode is added to the placeholder.
+				var element = document.createElement("div");
+				element.setAttribute("id", "result_gordo");
+				element.appendChild(document.createTextNode(name));
+				document.getElementById("placeholder_gordo").appendChild(element);
+					
+				break;
+			    case 2:
+				var wordlist1 = ["","PUTO","TREMENDO","JODIDO","FUERTE","ENORME","PENDEJO","PELOTUDO","MALDITO","GRANDÍSIMO"];
+				var wordlist2 = ["PELADO","BOLA DE BILLAR","BOLUDO","CALVO","ALOPÉCICO","FORRO","CANCEROSO","PÓLIPO","DON LIMPIO","COCOLISO","BOMBILLA","MINION","GLANDE","MORTADELO","CHEMA"];
+				var wordlist3 = ["CABEZA DE PORONGA","TESTA DE GLANDE","FRENTE DE RODILLA","TE LLEGA LA FRENTE A LA NUCA","CABEZA DE TERMO","PRIMO DE CAILLOU","NO TENÉS UN PELO DE TONTO","TE LAVÁS LA CABEZA CON GEL","TOBOGÁN DE PIOJOS","CABESEHUEVO","FLEQUILLO DE CARNE","DESIERTO DE PIOJOS","TENÉS MÁS ENTRADAS QUE LA REVENTA DEL BERNABEU","CABEZACODO","SE TE VE LA CALVA DESDE EL ESPACIO"];
+				var wordlist4 = ["LA CONCHA DE TU HERMANA","VERGA","MORITE","NO JODÁS","HIJO DE UN CAMION IVECO LLENO DE PUTAS","DENME MAYÚSCULAS MÁS GRANDES","ME ESTÁ DANDO UN INFARTO","HACETE COGER POR KING KONG","LPQTP","ANDATE A LA VERGA"];
+// Random numbers are made 
+				var randomNumber1 = parseInt(Math.random() * wordlist1.length);
+				var randomNumber2 = parseInt(Math.random() * wordlist2.length);
+				var randomNumber3 = parseInt(Math.random() * wordlist3.length);
+				var randomNumber4 = parseInt(Math.random() * wordlist4.length);
+				var name = wordlist1[randomNumber1] + " " + wordlist2[randomNumber2] + " " + wordlist3[randomNumber3] + ", " + wordlist4[randomNumber4];			
+
+				//alert(name); //Remove first to slashes to alert the name
+
+				//If there's already a name it is removed  
+				if(document.getElementById("result_calvo")){
+					document.getElementById("placeholder_calvo").removeChild(document.getElementById("result_calvo"));
+				}
+				// A div element is created to show the generated name. The Name is added as a textnode. Textnode is added to the placeholder.
+				var element = document.createElement("div");
+				element.setAttribute("id", "result_calvo");
+				element.appendChild(document.createTextNode(name));
+				document.getElementById("placeholder_calvo").appendChild(element);
+					
+				break;
+			    case 3:
+				var wordlist1 = ["","FEO","HORROR","BICHO","CARAJAULA","ANTIESTÉTICO","DESAGRADABLE","ORCO","CUADRO","ADEFESIO"];
+				var wordlist2 = ["CARA DE","CENICERO DE","TERROR DE UN PANTANO LLENO DE","BASURERO REPLETO DE","POCILGA DE","EXCREMENTO DE","CONTENEDOR DE","MONTÓN DE","OLÉS A","TE VES PEOR QUE UNA PILA DE","TE PARECES A UNA PILA DE","ARSENAL DE","TERMOTANQUE DE","CIÉNAGA REPLETA DE"];
+				var wordlist3 = ["MIERDA PUTREFACTA","BASURA SECADA AL SOL","VÓMITO","MOCOS DE CAMELLO VIUDO","CAZÓN EN ADOBO","COMIDA CADUCADA","PUS","EXCREMENTO DE MURCIÉLAGO","CARDOS BORRIQUEROS","ESO QUE HAY EN LAS CEBOLLAS QUE TE HACE LLORAR","MIL PORONGAS MALOLIENTES","ESTIÉRCOL","PLANCTON MARINO","RESTOS DE UN RESTAURANTE DE COMIDA BASURA"];
+				var wordlist4 = ["LA CONCHA DE TU MADRE","MORITE","NO JODÁS","SEDIMENTO DE","HIJO DE UNA PUTA CON SIDA","CAMBIATE LA CARA","QUE ME ENTIERREN","TE PINTÓ PICASSO","¿DE QUÉ LAGO ESCOCÉS SALISTE?","TE PARIÓ EL COCO","SOS MÁS FEO QUE MANDAR A LA ABUELA A POR DROGA"];
+
+						// Random numbers are made 
+				var randomNumber1 = parseInt(Math.random() * wordlist1.length);
+				var randomNumber2 = parseInt(Math.random() * wordlist2.length);
+				var randomNumber3 = parseInt(Math.random() * wordlist3.length);
+				var randomNumber4 = parseInt(Math.random() * wordlist4.length);
+				var name = wordlist1[randomNumber1] + " " + wordlist2[randomNumber2] + " " + wordlist3[randomNumber3] + ", " + wordlist4[randomNumber4];			
+
+				//alert(name); //Remove first to slashes to alert the name
+
+				//If there's already a name it is removed  
+				if(document.getElementById("result_feo")){
+					document.getElementById("placeholder_feo").removeChild(document.getElementById("result_feo"));
+				}
+				// A div element is created to show the generated name. The Name is added as a textnode. Textnode is added to the placeholder.
+				var element = document.createElement("div");
+				element.setAttribute("id", "result_feo");
+				element.appendChild(document.createTextNode(name));
+				document.getElementById("placeholder_feo").appendChild(element);
+					
+				break;
+					
+			    case 4:
+				var wordlist1 = ["","MINUSVÁLIDO","HUEVÓN","COJO","MALO","INÚTIL","LENTO","PARAPLÉJICO","LISIADO","CARACOL"];
+				var wordlist2 = ["ABORTO DE","HIJO DE","INTENTO DE","NO GANARÍAS NI A","CORRÉS MENOS QUE","TE GANA CORRIENDO","SOS MÁS LENTO QUE","TENÉS MENOS JUEGO DE PIERNAS QUE","ANDÁS COMO","TE MOVÉS MENOS QUE","APRENDIZ DE","TU PADRE ES","TENÉS EL PECHO MÁS HELADO QUE","SUDÁS MENOS QUE","USÁS TUS PIERNAS MENOS QUE"];
+				var wordlist3 = ["UNA BALLENA CUADRIPLÉJICA","STEPHEN HAWKING","UN MUERTO","UN VEGETAL","UN MONO CON SÍFILIS","LA CONCHA DE ELSA","LA SIRENITA","UN ÁRBOL CAÍDO","UNA CUCHARA DE PLÁSTICO","UNA TORTUGA COJA","UN ESQUIMAL EN INVIERNO","UNA PLACA TECTÓNICA","UN LEGO","UNA PIEDRA","EL GATO GARFIELD"];
+				var wordlist4 = ["LA CONCHA DE TU HERMANA","MORITE","HIJO DE UNA GALAXIA DE PUTAS","TENÉS MUÑONES POR PIERNAS","NOS QUEDAMOS FUERA DEL MUNDIAL POR TU CULPA","LPQTP","ME ESTÁ DANDO UN INFARTO","ARRUINADOR DE ALEGRÍAS","FORRO DEL ORTO","POR QUÉ CARAJO TE SIGUEN CONVOCANDO"];
 			// Random numbers are made 
-			var randomNumber1 = parseInt(Math.random() * wordlist1.length);
-			var randomNumber2 = parseInt(Math.random() * wordlist2.length);
-			var randomNumber3 = parseInt(Math.random() * wordlist3.length);
-			var randomNumber4 = parseInt(Math.random() * wordlist4.length);
-			var name = wordlist1[randomNumber1] + " " + wordlist2[randomNumber2] + " " + wordlist3[randomNumber3] + ", " + wordlist4[randomNumber4];			
+						var randomNumber1 = parseInt(Math.random() * wordlist1.length);
+						var randomNumber2 = parseInt(Math.random() * wordlist2.length);
+						var randomNumber3 = parseInt(Math.random() * wordlist3.length);
+						var randomNumber4 = parseInt(Math.random() * wordlist4.length);
+						var name = wordlist1[randomNumber1] + " " + wordlist2[randomNumber2] + " " + wordlist3[randomNumber3] + ", " + wordlist4[randomNumber4];			
 
-			//alert(name); //Remove first to slashes to alert the name
+						//alert(name); //Remove first to slashes to alert the name
 
-			//If there's already a name it is removed  
-			if(document.getElementById("result_gordo")){
-				document.getElementById("placeholder_gordo").removeChild(document.getElementById("result_gordo"));
+						//If there's already a name it is removed  
+						if(document.getElementById("result_malo")){
+							document.getElementById("placeholder_malo").removeChild(document.getElementById("result_malo"));
+						}
+						// A div element is created to show the generated name. The Name is added as a textnode. Textnode is added to the placeholder.
+						var element = document.createElement("div");
+						element.setAttribute("id", "result_malo");
+						element.appendChild(document.createTextNode(name));
+						document.getElementById("placeholder_malo").appendChild(element);
+
+							break;
+						    default:
+							break;
 			}
-			// A div element is created to show the generated name. The Name is added as a textnode. Textnode is added to the placeholder.
-			var element = document.createElement("div");
-			element.setAttribute("id", "result_gordo");
-			element.appendChild(document.createTextNode(name));
-			document.getElementById("placeholder_gordo").appendChild(element);
-		}		
-	</script>
-
-<script type="text/javascript">	
-	/*  Online Name Generators v.1.0 script is  made by Niels Gamborg webmaster at online-generator.com.  
-	*    The script is  free (as in "free speech" and also as in "free beer") in anyway. Use it after you own likings.
-	*    Peace and love. :)
-	*/	
-		function generator_calvo(){
-			// Add your own words to the wordlist. Be carefull to obey the showed syntax
-
-			var wordlist1 = ["","GORDO","SEBOSO","PORKY","CERDO","OBESO","ALBÓNDIGA","BALLENA","FANEGAS","MANTECOSO"];
-			var wordlist2 = ["CEMENTERIO DE","DESTRUCTOR DE","POZO DE","EXTINGUIDOR DE","TERROR DE","GENOCIDA DE","TERRORISTA DE","ATILA DE","CATÁSTROFE DE","ANIQUILADOR DE","ASESINO SERIAL DE","TERMOTANQUE DE","CONSUMIDOR COMPULSIVO DE","ABUSADOR DE","BUQUE CARGUERO DE"];
-			var wordlist3 = ["CANELONES A LA BOLOÑESA","POLLOS ASADOS RELLENOS","CHORIPANES LLENOS DE GRASA","MILANESAS DE POLLO","MIL GRANJAS DE POLLOS","OCHO CAMIONES DE CONSERVAS CÁRNICAS","HAMBURGUESAS DEL MCDONALDS","TODO TIPO DE CARNES","GUISOS DE CARNE","ENCHILADAS TAMAÑO FAMILIAR","SALAME PICANTE","PIJAS COMO TUBERÍAS","BOCATAS DE CALAMARES","COMIDA CHINA","PIZZAS OCHO QUESOS"];
-			var wordlist4 = ["LA CONCHA DE TU MADRE","VERGA","MORITE","NO JODÁS","HIJO DE MIL PUTAS","HACETE UN ENEMA DE CAFÉ","YO ME VOY A MORIR","NOS QUEDAMOS FUERA DEL MUNDIAL POR TU CULPA","TE CONFUNDEN CON LA BOLA","ME DAN PENA TUS TOBILLOS"];
-
-			// Random numbers are made 
-			var randomNumber1 = parseInt(Math.random() * wordlist1.length);
-			var randomNumber2 = parseInt(Math.random() * wordlist2.length);
-			var randomNumber3 = parseInt(Math.random() * wordlist3.length);
-			var randomNumber4 = parseInt(Math.random() * wordlist4.length);
-			var name = wordlist1[randomNumber1] + " " + wordlist2[randomNumber2] + " " + wordlist3[randomNumber3] + ", " + wordlist4[randomNumber4];			
-
-			//alert(name); //Remove first to slashes to alert the name
-
-			//If there's already a name it is removed  
-			if(document.getElementById("result_calvo")){
-				document.getElementById("placeholder_calvo").removeChild(document.getElementById("result_calvo"));
-			}
-			// A div element is created to show the generated name. The Name is added as a textnode. Textnode is added to the placeholder.
-			var element = document.createElement("div");
-			element.setAttribute("id", "result_calvo");
-			element.appendChild(document.createTextNode(name));
-			document.getElementById("placeholder_calvo").appendChild(element);
-		}		
-	</script>
-
-<script type="text/javascript">	
-	/*  Online Name Generators v.1.0 script is  made by Niels Gamborg webmaster at online-generator.com.  
-	*    The script is  free (as in "free speech" and also as in "free beer") in anyway. Use it after you own likings.
-	*    Peace and love. :)
-	*/	
-		function generator_feo(){
-			// Add your own words to the wordlist. Be carefull to obey the showed syntax
-
-			var wordlist1 = ["","GORDO","SEBOSO","PORKY","CERDO","OBESO","ALBÓNDIGA","BALLENA","FANEGAS","MANTECOSO"];
-			var wordlist2 = ["CEMENTERIO DE","DESTRUCTOR DE","POZO DE","EXTINGUIDOR DE","TERROR DE","GENOCIDA DE","TERRORISTA DE","ATILA DE","CATÁSTROFE DE","ANIQUILADOR DE","ASESINO SERIAL DE","TERMOTANQUE DE","CONSUMIDOR COMPULSIVO DE","ABUSADOR DE","BUQUE CARGUERO DE"];
-			var wordlist3 = ["CANELONES A LA BOLOÑESA","POLLOS ASADOS RELLENOS","CHORIPANES LLENOS DE GRASA","MILANESAS DE POLLO","MIL GRANJAS DE POLLOS","OCHO CAMIONES DE CONSERVAS CÁRNICAS","HAMBURGUESAS DEL MCDONALDS","TODO TIPO DE CARNES","GUISOS DE CARNE","ENCHILADAS TAMAÑO FAMILIAR","SALAME PICANTE","PIJAS COMO TUBERÍAS","BOCATAS DE CALAMARES","COMIDA CHINA","PIZZAS OCHO QUESOS"];
-			var wordlist4 = ["LA CONCHA DE TU MADRE","VERGA","MORITE","NO JODÁS","HIJO DE MIL PUTAS","HACETE UN ENEMA DE CAFÉ","YO ME VOY A MORIR","NOS QUEDAMOS FUERA DEL MUNDIAL POR TU CULPA","TE CONFUNDEN CON LA BOLA","ME DAN PENA TUS TOBILLOS"];
-
-			// Random numbers are made 
-			var randomNumber1 = parseInt(Math.random() * wordlist1.length);
-			var randomNumber2 = parseInt(Math.random() * wordlist2.length);
-			var randomNumber3 = parseInt(Math.random() * wordlist3.length);
-			var randomNumber4 = parseInt(Math.random() * wordlist4.length);
-			var name = wordlist1[randomNumber1] + " " + wordlist2[randomNumber2] + " " + wordlist3[randomNumber3] + ", " + wordlist4[randomNumber4];			
-
-			//alert(name); //Remove first to slashes to alert the name
-
-			//If there's already a name it is removed  
-			if(document.getElementById("result_feo")){
-				document.getElementById("placeholder_feo").removeChild(document.getElementById("result_feo"));
-			}
-			// A div element is created to show the generated name. The Name is added as a textnode. Textnode is added to the placeholder.
-			var element = document.createElement("div");
-			element.setAttribute("id", "result_feo");
-			element.appendChild(document.createTextNode(name));
-			document.getElementById("placeholder_feo").appendChild(element);
-		}		
-	</script>
-   <script type="text/javascript">	
-	/*  Online Name Generators v.1.0 script is  made by Niels Gamborg webmaster at online-generator.com.  
-	*    The script is  free (as in "free speech" and also as in "free beer") in anyway. Use it after you own likings.
-	*    Peace and love. :)
-	*/	
-		function generator_malo(){
-			// Add your own words to the wordlist. Be carefull to obey the showed syntax
-
-			var wordlist1 = ["","GORDO","SEBOSO","PORKY","CERDO","OBESO","ALBÓNDIGA","BALLENA","FANEGAS","MANTECOSO"];
-			var wordlist2 = ["CEMENTERIO DE","DESTRUCTOR DE","POZO DE","EXTINGUIDOR DE","TERROR DE","GENOCIDA DE","TERRORISTA DE","ATILA DE","CATÁSTROFE DE","ANIQUILADOR DE","ASESINO SERIAL DE","TERMOTANQUE DE","CONSUMIDOR COMPULSIVO DE","ABUSADOR DE","BUQUE CARGUERO DE"];
-			var wordlist3 = ["CANELONES A LA BOLOÑESA","POLLOS ASADOS RELLENOS","CHORIPANES LLENOS DE GRASA","MILANESAS DE POLLO","MIL GRANJAS DE POLLOS","OCHO CAMIONES DE CONSERVAS CÁRNICAS","HAMBURGUESAS DEL MCDONALDS","TODO TIPO DE CARNES","GUISOS DE CARNE","ENCHILADAS TAMAÑO FAMILIAR","SALAME PICANTE","PIJAS COMO TUBERÍAS","BOCATAS DE CALAMARES","COMIDA CHINA","PIZZAS OCHO QUESOS"];
-			var wordlist4 = ["LA CONCHA DE TU MADRE","VERGA","MORITE","NO JODÁS","HIJO DE MIL PUTAS","HACETE UN ENEMA DE CAFÉ","YO ME VOY A MORIR","NOS QUEDAMOS FUERA DEL MUNDIAL POR TU CULPA","TE CONFUNDEN CON LA BOLA","ME DAN PENA TUS TOBILLOS"];
-
-			// Random numbers are made 
-			var randomNumber1 = parseInt(Math.random() * wordlist1.length);
-			var randomNumber2 = parseInt(Math.random() * wordlist2.length);
-			var randomNumber3 = parseInt(Math.random() * wordlist3.length);
-			var randomNumber4 = parseInt(Math.random() * wordlist4.length);
-			var name = wordlist1[randomNumber1] + " " + wordlist2[randomNumber2] + " " + wordlist3[randomNumber3] + ", " + wordlist4[randomNumber4];			
-
-			//alert(name); //Remove first to slashes to alert the name
-
-			//If there's already a name it is removed  
-			if(document.getElementById("result_malo")){
-				document.getElementById("placeholder_malo").removeChild(document.getElementById("result_malo"));
-			}
-			// A div element is created to show the generated name. The Name is added as a textnode. Textnode is added to the placeholder.
-			var element = document.createElement("div");
-			element.setAttribute("id", "result_malo");
-			element.appendChild(document.createTextNode(name));
-			document.getElementById("placeholder_malo").appendChild(element);
 		}		
 	</script>
 
