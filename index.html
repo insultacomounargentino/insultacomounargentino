@@ -53,7 +53,6 @@
         <hr class="star-light">
         <h2 class="font-weight-light mb-0">¿Tenés envidia de la creatividad de los argentinos a la hora de insultar?</br>
 Ahora vos también podés insultar como ellos.</h2>
-	<a href="" id="twitterLink" title="Share on Twitter" target="blank" class="btn btn-twitter-"><i class="fa fa-twitter"></i> Twitter</a>
       </div>
 
     </header>
@@ -78,6 +77,7 @@ Ahora vos también podés insultar como ellos.</h2>
 	<div class="text-op text-center" id="placeholder_gordo">
 	     <div id="result_gordo"></div>
 	  </div>
+		<div id="twitter_gordo"><div>
 		
 	<br><br>
 	<hr class="star-dark mb-5">
@@ -97,6 +97,7 @@ Ahora vos también podés insultar como ellos.</h2>
 	  <div class="text-op text-center" id="placeholder_calvo">
 	     <div id="result_calvo"></div>
 	  </div>
+	<div id="twitter_calvo"><div>
 		
 	<br><br>
 	<hr class="star-dark mb-5">
@@ -116,6 +117,7 @@ Ahora vos también podés insultar como ellos.</h2>
 	<div class="text-op text-center" id="placeholder_feo">
 	     <div id="result_feo"></div>
 	  </div>
+		<div id="twitter_feo"><div>
 	
 	<br><br>
 	<hr class="star-dark mb-5">
@@ -135,6 +137,7 @@ Ahora vos también podés insultar como ellos.</h2>
 	<div class="text-op text-center" id="placeholder_malo">
 	     <div id="result_malo"></div>
 	  </div>
+			<div id="twitter_malo"><div>
 		
 	<br><br>
 	<br><br>	
@@ -191,6 +194,8 @@ Ahora vos también podés insultar como ellos.</h2>
 				var randomNumber4 = parseInt(Math.random() * wordlist4.length);
 				var name = wordlist1[randomNumber1] + " " + wordlist2[randomNumber2] + " " + wordlist3[randomNumber3] + ", " + wordlist4[randomNumber4];			
 				var tweet = name + " " + "@insultacomoARG" + " " + "#Rusia2018"
+				var inner = "<a href=&quot;" + "http://twitter.com/intent/tweet/?text=" + encodeURIComponent(tweet) + "&quot; id=&quot;twitterLink&quot; title=&quot;Share on Twitter&quot; target=&quot;blank&quot; class=&quot;btn btn-twitter-&quot;>&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt; Twitter&lt;/a&gt;"
+
 				//alert(name); //Remove first to slashes to alert the name
 
 				//If there's already a name it is removed  
@@ -202,7 +207,7 @@ Ahora vos también podés insultar como ellos.</h2>
 				element.setAttribute("id", "result_gordo");
 				element.appendChild(document.createTextNode(name));
 				document.getElementById("placeholder_gordo").appendChild(element);
-				document.getElementById('twitterLink').href = "http://twitter.com/intent/tweet/?text=" + encodeURIComponent(tweet)
+				document.getElementById('twitter_gordo').href = "http://twitter.com/intent/tweet/?text=" + encodeURIComponent(tweet)
 					
 				break;
 			    case 2:
@@ -216,7 +221,9 @@ Ahora vos también podés insultar como ellos.</h2>
 				var randomNumber3 = parseInt(Math.random() * wordlist3.length);
 				var randomNumber4 = parseInt(Math.random() * wordlist4.length);
 				var name = wordlist1[randomNumber1] + " " + wordlist2[randomNumber2] + " " + wordlist3[randomNumber3] + ", " + wordlist4[randomNumber4];			
-
+				var tweet = name + " " + "@insultacomoARG" + " " + "#Rusia2018"
+				
+				var inner = "<a href=&quot;" + "http://twitter.com/intent/tweet/?text=" + encodeURIComponent(tweet) + "&quot; id=&quot;twitterLink&quot; title=&quot;Share on Twitter&quot; target=&quot;blank&quot; class=&quot;btn btn-twitter-&quot;>&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt; Twitter&lt;/a&gt;"
 				//alert(name); //Remove first to slashes to alert the name
 
 				//If there's already a name it is removed  
@@ -228,8 +235,8 @@ Ahora vos también podés insultar como ellos.</h2>
 				element.setAttribute("id", "result_calvo");
 				element.appendChild(document.createTextNode(name));
 				document.getElementById("placeholder_calvo").appendChild(element);
-					
-				break;
+				document.getElementById('twitter_calvo').innerHTML = inner
+					break;
 			    case 3:
 				var wordlist1 = ["","FEO","HORROR","BICHO","CARAJAULA","ANTIESTÉTICO","DESAGRADABLE","ORCO","CUADRO","ADEFESIO"];
 				var wordlist2 = ["CARA DE","CENICERO DE","TERROR DE UN PANTANO LLENO DE","BASURERO REPLETO DE","POCILGA DE","EXCREMENTO DE","CONTENEDOR DE","MONTÓN DE","OLÉS A","TE VES PEOR QUE UNA PILA DE","TE PARECES A UNA PILA DE","ARSENAL DE","TERMOTANQUE DE","CIÉNAGA REPLETA DE"];
@@ -242,7 +249,10 @@ Ahora vos también podés insultar como ellos.</h2>
 				var randomNumber3 = parseInt(Math.random() * wordlist3.length);
 				var randomNumber4 = parseInt(Math.random() * wordlist4.length);
 				var name = wordlist1[randomNumber1] + " " + wordlist2[randomNumber2] + " " + wordlist3[randomNumber3] + ", " + wordlist4[randomNumber4];			
-
+				var tweet = name + " " + "@insultacomoARG" + " " + "#Rusia2018"
+				
+				var inner = "<a href=&quot;" + "http://twitter.com/intent/tweet/?text=" + encodeURIComponent(tweet) + "&quot; id=&quot;twitterLink&quot; title=&quot;Share on Twitter&quot; target=&quot;blank&quot; class=&quot;btn btn-twitter-&quot;>&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt; Twitter&lt;/a&gt;"
+				//alert(name); //Remove first to slashes to alert the name
 				//alert(name); //Remove first to slashes to alert the name
 
 				//If there's already a name it is removed  
@@ -254,7 +264,7 @@ Ahora vos también podés insultar como ellos.</h2>
 				element.setAttribute("id", "result_feo");
 				element.appendChild(document.createTextNode(name));
 				document.getElementById("placeholder_feo").appendChild(element);
-					
+					document.getElementById('twitter_feo').innerHTML = inner
 				break;
 					
 			    case 4:
@@ -268,7 +278,10 @@ Ahora vos también podés insultar como ellos.</h2>
 						var randomNumber3 = parseInt(Math.random() * wordlist3.length);
 						var randomNumber4 = parseInt(Math.random() * wordlist4.length);
 						var name = wordlist1[randomNumber1] + " " + wordlist2[randomNumber2] + " " + wordlist3[randomNumber3] + ", " + wordlist4[randomNumber4];			
+						var tweet = name + " " + "@insultacomoARG" + " " + "#Rusia2018"
 
+						var inner = "<a href=&quot;" + "http://twitter.com/intent/tweet/?text=" + encodeURIComponent(tweet) + "&quot; id=&quot;twitterLink&quot; title=&quot;Share on Twitter&quot; target=&quot;blank&quot; class=&quot;btn btn-twitter-&quot;>&lt;i class=&quot;fa fa-twitter&quot;&gt;&lt;/i&gt; Twitter&lt;/a&gt;"
+						//alert(name); //Remove first to slashes to alert the name
 						//alert(name); //Remove first to slashes to alert the name
 
 						//If there's already a name it is removed  
@@ -280,7 +293,7 @@ Ahora vos también podés insultar como ellos.</h2>
 						element.setAttribute("id", "result_malo");
 						element.appendChild(document.createTextNode(name));
 						document.getElementById("placeholder_malo").appendChild(element);
-
+						document.getElementById('twitter_malo').innerHTML = inner
 							break;
 						    default:
 							break;
