@@ -210,5 +210,32 @@ background-color: #FF6600
   background-color: #5f99cf;
   border-color: #5f99cf;
 }
+.resp-sharing-button--whatsapp {
+  background-color: transparent;
+  border-color: transparent;
+}
 
+.resp-sharing-button--whatsapp:hover,
+.resp-sharing-button--whatsapp:active {
+  background-color: #25D366;
+  border-color: #25D366;
+}
+
+.resp-sharing-button--vk {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.resp-sharing-button--vk:hover
+.resp-sharing-button--vk:active {
+  background-color: #507299;
+  border-color: #507299;
+}
+
+.resp-sharing-button--telegram {
+  background-color: transparent;
+}
+
+.resp-sharing-button--telegram:hover {
+  background-color: #54A9EB;}
 
