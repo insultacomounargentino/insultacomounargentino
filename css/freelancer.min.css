@@ -114,11 +114,11 @@
 }
 
 .resp-sharing-button--whatsapp {
-  background-color: #25D366
+  background-color: transparent;
 }
 
 .resp-sharing-button--whatsapp:hover {
-  background-color: #1da851
+  background-color: #25D366
 }
 
 .resp-sharing-button--hackernews {
@@ -127,11 +127,11 @@ background-color: #FF6600
 .resp-sharing-button--hackernews:hover, .resp-sharing-button--hackernews:focus {   background-color: #FB6200 }
 
 .resp-sharing-button--vk {
-  background-color: #507299
+  background-color: transparent;
 }
 
 .resp-sharing-button--vk:hover {
-  background-color: #43648c
+  background-color: #507299
 }
 
 .resp-sharing-button--facebook {
